@@ -9,6 +9,8 @@ pipelines:
       - groovy: checkout scm
     build:
       steps:
+      - sh: make test
+        name: make-test
       - sh: make linux
         name: make-linux
   release:
