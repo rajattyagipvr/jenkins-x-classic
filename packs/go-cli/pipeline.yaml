@@ -30,6 +30,7 @@ pipelines:
       - sh: jx step git credentials
         when: "!prow"
         name: git-credentials
+        image: gcr.io/jenkinsxio-labs/jxl
     setVersion:
       steps:
       - sh: echo \$(jx-release-version) > VERSION

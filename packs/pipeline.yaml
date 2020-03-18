@@ -11,6 +11,7 @@ pipelines:
         when: "!prow"
       - sh: jx step git credentials
         when: "!prow"
+        image: gcr.io/jenkinsxio-labs/jxl
   post:
     steps:
     - groovy: always
