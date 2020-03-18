@@ -14,7 +14,7 @@ pipelines:
   release:
     setVersion:
       steps:
-      - sh: echo \$(jx-release-version) > VERSION
+      - sh: jx step next-version --filename pom.xml
         name: next-version
         comment: so we can retrieve the version in later steps
       - sh: mvn versions:set -DnewVersion=\$(cat VERSION)
