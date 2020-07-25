@@ -11,6 +11,7 @@ pipelines:
         when: "!prow"
       - sh: jx step git credentials
         when: "!prow"
+        image: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/jxl
   post:
     steps:
     - groovy: always
