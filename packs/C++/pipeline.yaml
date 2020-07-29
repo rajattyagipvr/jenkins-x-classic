@@ -2,7 +2,7 @@ extends:
   file: ../pipeline.yaml
 agent:
   label: jenkins-cpp
-  container: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/builder-cpp
+  container: cpp
 pipelines:
   pullRequest:
     build:
